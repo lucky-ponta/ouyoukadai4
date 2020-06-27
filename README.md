@@ -11,6 +11,7 @@ Things you may want to cover:
 
 * Configuration
 
+
 * Database creation
 
 * Database initialization
@@ -22,3 +23,18 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+○Bookers2
+✓投稿者のユーザーIdが入っているブックモデルの全てのデータを取り出したい
+✓1つづつ並べて表示させたい
+✓editとdestroyのリンクを一緒に表示させたい
+リンクを投稿者だけに表示させたい
+if文は条件分岐
+比べるものを明確に日本語化
+
+○ヒント
+サインインしているかどうかを判別するヘルパーがある
+１．ルーティングを元に使うコントローラーとアクションを指定する
+２．アクションのdef　～　endを上から読み込む
+３．view/controller名/アクション名.html.erb　をrenderする
+
