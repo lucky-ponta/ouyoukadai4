@@ -38,3 +38,5 @@ if文は条件分岐
 ２．アクションのdef　～　endを上から読み込む
 ３．view/controller名/アクション名.html.erb　をrenderする
 
+
+
