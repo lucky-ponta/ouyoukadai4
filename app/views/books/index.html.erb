@@ -12,6 +12,17 @@
 				<th>Opinion</th>
 		    </tr>
 	    <% @books.each do |book| %>
+
+	     <!-- ここを追加 -->
+    <% if current_user != book.user %>
+        <% if book.user.followed_by?(current_user) %>
+            <p><%=link_to "フォロー済み", user_relationships_path(book.user.id), method: :delete %></p>
+        <% else %>
+            <p><%=link_to "フォローする", user_relationships_path(book.user.id), method: :post %></p>
+        <% end %>
+    <% end %>
+    <!-- ここまで -->
+
 		    <tr>
 		    	<td><%= link_to attachment_image_tag(book.user, :profile_image, size:'40x40', format: 'jpg',fallback: "no_image.jpg" ),user_path(book.user) %>
 		    	</td>
